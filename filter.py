@@ -19,7 +19,7 @@ def TokenProbability(filePath, tokenRegex, intermediateFilePath=None, verbose=Fa
             if re.search(tokenRegex, token):
                 tokens[token] = tokens.get(token,0)+1
 
-    # Remove words that appear less than 5 times
+    # Remove words that appear less than 3 times
     deleteTokens = []
     for word, count in tokens.items():
         if count < 3:
